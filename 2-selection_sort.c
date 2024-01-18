@@ -1,12 +1,15 @@
 #include "sort.h"
 
 /**
- * 
+ * selection_sort - function that selection sort an array
+ *@array: array given
+ *@size: size given
 */
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, min, tmp;
+	size_t i, j, min;
+	int tmp;
 
 	for (i = 0; i < size - 1; i++)
 	{
@@ -19,7 +22,7 @@ void selection_sort(int *array, size_t size)
 				min = j;
 			}
 		}
-		if (tmp != i)
+		if (min != i)
 		{
 		tmp = array[min];
 		array[min] = array[i];
